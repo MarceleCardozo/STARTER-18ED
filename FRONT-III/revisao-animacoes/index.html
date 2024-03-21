@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exemplo simples animação</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        transition: background-color 0.5s ease;
+      }
+
+      @keyframes changeColor {
+        0% {
+          background-color: red;
+        }
+
+        50% {
+          background-color: blue;
+        }
+
+        100% {
+          background-color: green;
+        }
+      }
+
+      .animate {
+        animation: changeColor 3s infinite;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="box"></div>
+    </div>
+
+    <script>
+      setTimeout(() => {
+        document.querySelector(".box").classList.add("animate");
+      }, 2000);
+    </script>
+  </body>
+</html>
