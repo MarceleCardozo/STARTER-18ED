@@ -1,0 +1,1 @@
+type UserOrDiretor = User | Diretor;
