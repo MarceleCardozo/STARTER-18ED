@@ -16,8 +16,8 @@ class Usuario {
     livro.emprestar();
   }
 
-  devolverLivro() {
-    this.devolverLivro();
+  devolverLivro(livro: Livro) {
+    this.livroEmprestado.indexOf(livro);
   }
 }
 
