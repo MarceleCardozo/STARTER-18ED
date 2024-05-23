@@ -17,8 +17,13 @@ class Usuario {
   }
 
   devolverLivro(livro: Livro) {
-    this.livroEmprestado.indexOf(livro);
-    this.livroEmprestado.splice();
+    const index = this.livroEmprestado.indexOf(livro);
+    if (index !== -1) {
+      this.livroEmprestado.splice(index,1);
+    } else {
+      
+    }
+
   }
 }
 
