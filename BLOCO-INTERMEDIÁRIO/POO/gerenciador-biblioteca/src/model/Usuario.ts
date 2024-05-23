@@ -20,8 +20,9 @@ class Usuario {
     const index = this.livroEmprestado.indexOf(livro);
     if (index !== -1) {
       this.livroEmprestado.splice(index,1);
+      livro.devolver()
     } else {
-      
+      console.log("Livro não encontrado!");
     }
 
   }
