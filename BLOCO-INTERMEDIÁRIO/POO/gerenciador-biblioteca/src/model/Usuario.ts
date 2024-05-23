@@ -18,6 +18,7 @@ class Usuario {
 
   devolverLivro(livro: Livro) {
     this.livroEmprestado.indexOf(livro);
+    this.livroEmprestado.splice();
   }
 }
 
