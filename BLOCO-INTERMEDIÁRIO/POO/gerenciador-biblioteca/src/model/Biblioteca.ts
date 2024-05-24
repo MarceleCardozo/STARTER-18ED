@@ -5,17 +5,17 @@ class Biblioteca {
   public livros: Livro[];
   public usuarios: Usuario[];
 
-  constructor(livros: Livro[], usuarios: Usuario[]) {
-    this.livros = livros;
-    this.usuarios = usuarios;
+  constructor() {
+    this.livros = [];
+    this.usuarios = [];
   }
 
   registrarUsuario(usuario: Usuario) {
-    this.usuarios.push(usuario);
+    return this.usuarios.push(usuario);
   }
 
   listarLivrosDisponiveis() {
-    console.log(this.livros);
+    return this.livros.filter((livro) => livro.disponivel);
   }
 
   buscarLivroPorTitulo(titulo: string) {

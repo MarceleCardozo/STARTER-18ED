@@ -13,8 +13,15 @@ class Usuario {
         this.livroEmprestado.push(livro);
         livro.emprestar();
     }
-    devolverLivro() {
-        this.devolverLivro();
+    devolverLivro(livro) {
+        const index = this.livroEmprestado.indexOf(livro);
+        if (index !== -1) {
+            this.livroEmprestado.splice(index, 1);
+            livro.devolver();
+        }
+        else {
+            console.log("Livro não encontrado!");
+        }
     }
 }
 exports.default = Usuario;
