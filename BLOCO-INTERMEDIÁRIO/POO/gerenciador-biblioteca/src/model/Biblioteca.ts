@@ -23,12 +23,19 @@ class Biblioteca {
   }
 
   emprestarLivros(titulo: string, usuario: Usuario) {
-    const index = this.livros.findIndex((livro) => livro.titulo === titulo);
-    if (index !== -1) {
-        this.livros.splice(index,1);
-        usuario.emprestarLivro(livro: Livro)
-      } else {
-        console.log("Livro não encontrado!");
-      }
+    const livroBuscado = this.buscarLivroPorTitulo(titulo);
+    if (livroBuscado) {
+      return usuario.emprestarLivro(livroBuscado);
+    }
+    return "Livro não foi encontrado";
+  }
+  devolverLivro(titulo: string, usuario: Usuario) {
+    const livroBuscado = this.buscarLivroPorTitulo(titulo);
+    if (livroBuscado) {
+      return usuario.devolverLivro(livroBuscado);
+    }
+    return "Livro não encontrado!";
   }
 }
+
+export default Biblioteca;
