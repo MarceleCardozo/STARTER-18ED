@@ -24,7 +24,7 @@ class Usuario {
     } else {
       console.log("Livro não encontrado!");
     }
-
+    
   }
 }
 

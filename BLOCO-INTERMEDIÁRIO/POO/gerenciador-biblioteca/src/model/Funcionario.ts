@@ -13,9 +13,13 @@ class Funcionario extends Usuario {
     adicionarLivro(livro:Livro, biblioteca:Biblioteca){
         biblioteca.livros.push(livro) 
     }
+
     removerLivro(livro:Livro, biblioteca: Biblioteca){
-        const indice = livro
-        
-        biblioteca.livros.splice()
+        const indice = biblioteca.livros.indexOf(livro);
+        if(indice !== -1) {
+            biblioteca.livros.splice(indice, 1);
+        } else {
+            console.log('Livro não encontrado!');
+        }
     }
 }
