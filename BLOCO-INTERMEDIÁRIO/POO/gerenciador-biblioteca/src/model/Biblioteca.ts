@@ -24,5 +24,11 @@ class Biblioteca {
 
   emprestarLivros(titulo: string, usuario: Usuario) {
     const index = this.livros.findIndex((livro) => livro.titulo === titulo);
+    if (index !== -1) {
+        this.livros.splice(index,1);
+        usuario.emprestarLivro(livro: Livro)
+      } else {
+        console.log("Livro não encontrado!");
+      }
   }
 }
