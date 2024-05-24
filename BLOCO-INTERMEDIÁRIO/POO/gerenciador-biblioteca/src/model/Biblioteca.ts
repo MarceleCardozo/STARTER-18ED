@@ -22,7 +22,7 @@ class Biblioteca {
     return this.livros.find((livro) => livro.titulo === titulo);
   }
 
-  emprestarLivros(titulo: string) {
-    this.livros.findIndex((livro) => livro.titulo === titulo);
+  emprestarLivros(titulo: string, usuario: Usuario) {
+    const index = this.livros.findIndex((livro) => livro.titulo === titulo);
   }
 }
