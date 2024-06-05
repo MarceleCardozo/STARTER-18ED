@@ -1,0 +1,35 @@
+Você deve implementar um sistema para gerenciar um hospital. O sistema deve permitir:
+
+- Gerenciar pacientes (adicionar, remover, listar).
+- Gerenciar médicos (adicionar, remover, listar).
+- Criar e gerenciar consultas (criar consulta, listar consultas de um paciente ou médico).
+- Associar tratamentos às consultas.
+
+Requisitos do Sistema
+
+Classes e Interfaces
+
+Paciente: Representa um paciente do hospital.
+Propriedades: nome, idade, historicoConsultas (lista de consultas).
+Métodos: adicionarConsulta, listarConsultas.
+
+Medico: Representa um médico do hospital.
+Propriedades: nome, especialidade, consultas (lista de consultas).
+Métodos: adicionarConsulta, listarConsultas.
+
+Consulta: Representa uma consulta realizada no hospital.
+Propriedades: paciente, medico, data, tratamento.
+Métodos: adicionarTratamento, detalhesConsulta.
+
+Tratamento: Representa um tratamento associado a uma consulta.
+Propriedades: descricao, custo.
+
+Hospital: Representa o hospital.
+Propriedades: pacientes (lista de pacientes), medicos (lista de médicos), consultas (lista de consultas).
+Métodos: adicionarPaciente, removerPaciente, listarPacientes, adicionarMedico, removerMedico, listarMedicos, criarConsulta.
+
+Regras de Negócio
+Um paciente pode ter várias consultas associadas a diferentes médicos.
+Um médico pode ter várias consultas associadas a diferentes pacientes.
+Cada consulta deve estar associada a um único paciente e a um único médico.
+Um tratamento pode ser adicionado a uma consulta.
