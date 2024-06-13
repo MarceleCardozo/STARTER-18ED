@@ -1,16 +1,15 @@
-import React from 'react';
+import React from "react";
+import TitlePage from "../components/TitlePage";
+import HeaderStyled from "../components/HeaderStyles";
 
-interface ComponetNameProps {
-  property: string;
-}
-
-const ComponetName: React.FC<ComponetNameProps> = ({ property }) => {
+const Home: React.FC = () => {
   return (
     <>
-      <h1>Growdev</h1>
-      
+      <HeaderStyled>
+        <TitlePage title="Minha primeira página com react." />
+      </HeaderStyled>
     </>
   );
 };
 
-export default ComponetName;
+export default Home;
