@@ -8,6 +8,7 @@ const Home: React.FC = () => {
       <HeaderStyled>
         <TitlePage title="Minha primeira página com react." />
       </HeaderStyled>
+      
     </>
   );
 };
