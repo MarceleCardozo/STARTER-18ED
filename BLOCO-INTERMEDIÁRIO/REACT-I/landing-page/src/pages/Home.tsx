@@ -1,6 +1,6 @@
 import React from "react";
 import TitlePage from "../components/TitlePage";
-import HeaderStyled from "../components/HeaderStyles";
+import DivStyled from "../components/DivStyles";
 import CardSmall from "../components/card-small/CardSmall";
 import screen from "../assets/screen.png";
 import levels from "../assets/levels.png";
@@ -10,26 +10,30 @@ import DivRowFlex from "../components/card-small/DivRowFlex";
 const Home: React.FC = () => {
   return (
     <>
-      <HeaderStyled>
+      <DivStyled>
         <TitlePage title="Minha primeira página com react." />
-      </HeaderStyled>
+      </DivStyled>
       <DivRowFlex>
         <CardSmall>
           <img src={screen}></img>
-          <h3>Somente para desktop</h3>
+          <h2>Somente para desktop</h2>
           <p>Vamos aprender, como utilizar um framework.</p>
         </CardSmall>
         <CardSmall>
           <img src={levels}></img>
-          <h3>Criado com componentes</h3>
+          <h2>Criado com componentes</h2>
           <p>Utilizamos o Styled Components.</p>
         </CardSmall>
         <CardSmall>
           <img src={check}></img>
-          <h3>Fácil aproveitamento</h3>
+          <h2>Fácil aproveitamento</h2>
           <p>Estamos no caminho.</p>
         </CardSmall>
       </DivRowFlex>
+
+      <DivStyled height="200px">
+        <TitlePage title="Contato." />
+      </DivStyled>
     </>
   );
 };

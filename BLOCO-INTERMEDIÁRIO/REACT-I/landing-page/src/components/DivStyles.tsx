@@ -1,9 +1,13 @@
 import styled from "styled-components";
 import ImgMar from "../assets/mar.jpg";
 
-const HeaderStyled = styled.header`
+interface DivStyledProps {
+  height?: string;
+}
+
+const DivStyled = styled.div<DivStyledProps>`
   background-image: url(${ImgMar});
-  height: 350px;
+  height: ${({ height }) => height ?? "350px"};
   background-size: cover;
   background-position: bottom;
   display: flex;
@@ -12,4 +16,4 @@ const HeaderStyled = styled.header`
   color: white;
   font-size: x-large;
 `;
-export default HeaderStyled;
+export default DivStyled;
