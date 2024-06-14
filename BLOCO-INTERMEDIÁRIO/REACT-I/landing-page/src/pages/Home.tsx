@@ -7,6 +7,7 @@ import levels from "../assets/levels.png";
 import check from "../assets/check.png";
 import DivRowFlex from "../components/card-small/DivRowFlex";
 import CardBig from "../components/card-big/CardBig";
+import CellImage from "../assets/celular.png";
 
 const Home: React.FC = () => {
   return (
@@ -31,7 +32,9 @@ const Home: React.FC = () => {
           <p>Estamos no caminho.</p>
         </CardSmall>
       </DivRowFlex>
-      <CardBig><h1>Lorem Ipsum</h1>
+      
+      <DivRowFlex>
+      <CardBig><h2>Lorem Ipsum</h2>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum animi maxime temporibus cum magni, delectus libero! Perspiciatis quo nobis magni labore, earum, architecto, impedit deleniti voluptas velit temporibus tenetur iure!
       Beatae minus aperiam totam fugit doloribus voluptatibus, ad sequi! Voluptates odio labore, sint debitis harum recusandae neque mollitia, impedit rem rerum ratione officiis vel magnam placeat inventore facilis vero aut?
       Ad culpa, accusantium assumenda impedit at dignissimos quam nulla doloremque architecto corrupti consectetur ullam dicta excepturi a odio non nostrum nesciunt vel tenetur cupiditate soluta? Velit blanditiis minus ipsam repellendus.
@@ -39,10 +42,7 @@ const Home: React.FC = () => {
       Ipsum cum hic, ratione voluptatibus placeat ipsam illum consequuntur iusto consectetur sapiente voluptates, perferendis alias sed maiores doloribus temporibus! Temporibus reiciendis voluptates esse fugiat doloribus fuga ab saepe exercitationem explicabo.
       Odio perspiciatis unde ut sunt. Dolores eaque, nulla accusamus placeat, voluptatum culpa, corporis nihil beatae perspiciatis a nostrum cum sint voluptatem aut laudantium tempore nobis harum hic alias! Reprehenderit, similique!</p>
       </CardBig>
-      <CardBig>
-        
-      </CardBig>
-      
+      </DivRowFlex>
 
       <DivStyled height="200px">
         <TitlePage title="Contato." />
