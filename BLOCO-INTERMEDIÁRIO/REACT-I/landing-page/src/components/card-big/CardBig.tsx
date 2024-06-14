@@ -1,9 +1,13 @@
 import CardBigStyled from "./CardBigStyled";
 
-function CardBig() {
+interface CardBigPros {
+  children: React.ReactNode;
+}
+
+function CardBig({children}:CardBigPros) {
   return (
     <>
-      <CardBigStyled></CardBigStyled>
+      <CardBigStyled>{children}</CardBigStyled>
     </>
   );
 }
