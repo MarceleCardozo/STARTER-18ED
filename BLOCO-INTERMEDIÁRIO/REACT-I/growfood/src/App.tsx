@@ -1,7 +1,8 @@
 import "./App.css";
+import ThemeDefault from "./theme/ThemeDefault";
 
 function App() {
-  return <h1>Hello World!</h1>;
+  return (<ThemeDefault><h1>Hello World!</h1></ThemeDefault>);
 }
 
 export default App;
