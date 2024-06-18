@@ -1,8 +1,9 @@
 import "./App.css";
+import AppRoutes from "./routes/AppRoutes";
 import ThemeDefault from "./theme/ThemeDefault";
 
 function App() {
-  return (<ThemeDefault><h1>Hello World!</h1></ThemeDefault>);
+  return (<ThemeDefault><AppRoutes/></ThemeDefault>);
 }
 
 export default App;
