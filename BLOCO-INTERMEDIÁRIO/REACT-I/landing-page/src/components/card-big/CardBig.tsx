@@ -5,7 +5,7 @@ interface CardBigPros {
   children: React.ReactNode;
 }
 
-function CardBig({children}:CardBigPros) {
+function CardBig({ children }: CardBigPros) {
   return (
     <>
       <CardBigStyled>{children}</CardBigStyled>

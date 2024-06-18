@@ -1,18 +1,15 @@
 import styled from "styled-components";
 
 interface CardBigStyledProps {
-  image?: string;
+  images?: string;
 }
 
 const CardBigStyled = styled.div<CardBigStyledProps>`
   background: url(image);
+  width: 100%;
+  height: 450px;
   display: flex;
-  flex-direction: column;
-  text-align: start;
-  width: 50%;
-  height: 400px;
-  padding: 50px 30px;
-  justify-content: center;
+  align-items: center;
 `;
 
 export default CardBigStyled;
