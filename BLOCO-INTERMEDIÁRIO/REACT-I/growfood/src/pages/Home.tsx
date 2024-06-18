@@ -1,6 +1,13 @@
-function Home () {
-    return <h1>hello world</h1>
+import PageDefault from "../components/PageDefault";
 
+function Home() {
+  return (
+    <>
+      <PageDefault>
+        <h1>HOME</h1>
+      </PageDefault>
+    </>
+  );
 }
 
 export default Home;
