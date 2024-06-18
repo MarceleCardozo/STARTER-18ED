@@ -8,6 +8,8 @@ import check from "../assets/check.png";
 import DivRowFlex from "../components/card-small/DivRowFlex";
 import CardBig from "../components/card-big/CardBig";
 import CellImage from "../assets/celular.png";
+import CardImageStyled from "../components/card-image/CardImageStyled";
+import CardImage from "../components/card-image/CardImage";
 
 const Home: React.FC = () => {
   return (
@@ -61,10 +63,9 @@ const Home: React.FC = () => {
             Reprehenderit, similique!
           </p>
         </CardBig>
-
-        <CardBig>
-          <img src={CellImage} alt="" />
-        </CardBig>
+        <CardImage>
+          <img src={CellImage} alt="celular" />
+        </CardImage>
       </DivRowFlex>
 
       <DivStyled height="200px">
