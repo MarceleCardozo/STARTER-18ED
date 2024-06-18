@@ -1,10 +1,11 @@
 import PageDefault from "../components/PageDefault";
+import WelcomeComponent from "../components/welcome-component/WelcomeComponent";
 
 function Home() {
   return (
     <>
       <PageDefault>
-        <h1>HOME</h1>
+        <WelcomeComponent/>
       </PageDefault>
     </>
   );
