@@ -1,11 +1,19 @@
-import H1Styled from "./H1Styled"
+import DivWelcomeStyled from "./DivWelcomeStyle";
+import H1Styled from "./H1Styled";
 
-function WelcomeComponent(){
-    return(
-        <div style={{display: 'flex'}}>
-            <H1Styled switchColor={false}>Welcome</H1Styled><H1Styled switchColor={true}>&ensp;to The world of Testy & Fresh Food.</H1Styled>
-        </div>
-    )
+function WelcomeComponent() {
+  return (
+    <DivWelcomeStyled>
+      <H1Styled switchColor={false}>
+        Welcome
+        <H1Styled switchColor={true}>
+          &ensp;to <br />
+          The world of <br />
+          Tasty & Fresh Food.
+        </H1Styled>
+      </H1Styled>
+    </DivWelcomeStyled>
+  );
 }
 
-export default WelcomeComponent
+export default WelcomeComponent;
