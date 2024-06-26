@@ -9,6 +9,7 @@ const NavbarStyled = styled.header`
   align-items: center;
   justify-content: center;
   gap: 10px;
+  font-size: 1.2rem;
 `;
 
 export default NavbarStyled;
