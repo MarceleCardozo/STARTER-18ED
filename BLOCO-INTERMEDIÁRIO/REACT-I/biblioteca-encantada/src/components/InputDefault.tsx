@@ -8,8 +8,9 @@ interface InputDefaultProps {
 function InputDefault({ key, label, value, action }: InputDefaultProps) {
   return (
     <>
-      <label htmlFor="">{label}</label>
-      <input type="text" />
+      <label htmlFor={key}>{label}</label>
+      <input type="text" name={key} key={key} value={value} onChange={e => action(e.target.value)} />
     </>
   );
 }
+export default InputDefault;
