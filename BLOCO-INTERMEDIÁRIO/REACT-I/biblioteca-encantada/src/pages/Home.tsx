@@ -7,14 +7,14 @@ function Home() {
   const [id, setId] = useState<string>("");
   const [title, setTitle] = useState<string>("");
   const [author, setAuthor] = useState<string>("");
-  const [publication, setPublication] = useState<number>(0);
+  const [publication, setPublication] = useState<string>("");
   const [date, setDate] = useState<string>("");
   const [gender, setGender] = useState<string>("");
   const [description, setDescription] = useState<string>("");
   const [books, setBooks] = useState<BooksType[]>([]);
 
   function handleClick() {
-    if(id && title && author && publication && date && gender && description) {
+    if (id && title && author && publication && date && gender && description) {
       const book: BooksType = {
         id,
         title,
@@ -22,18 +22,19 @@ function Home() {
         publication,
         date,
         gender,
-        description
-      } 
+        description,
+      };
 
       const newBooks = [...books, book];
 
       setBooks(newBooks);
+      localStorage.setItem("books", JSON.stringify(newBooks));
     }
   }
 
   return (
     <>
-      <form>
+      <form onSubmit={handleClick}>
         <InputDefault action={setId} key="id" label="ID" value={id} />
         <InputDefault
           action={setTitle}

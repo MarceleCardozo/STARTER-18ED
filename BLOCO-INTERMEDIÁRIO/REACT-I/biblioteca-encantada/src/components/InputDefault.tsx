@@ -16,7 +16,7 @@ function InputDefault({ key, label, value, action }: InputDefaultProps) {
         value={value}
         onChange={(e) => action(e.target.value)}
       />
-      <br/>
+      <br />
     </>
   );
 }
