@@ -1,13 +1,17 @@
 interface ButtonDefaultProps {
-    label: string;
+  label: string;
+  action?: () => void;
+  type?: "submit";
 }
 
-function ButtonDefault({label}: ButtonDefaultProps) {
-    return (   
-        <>
-            <button type="submit">{label}</button>
-        </>
-    );
+function ButtonDefault({ label, action, type }: ButtonDefaultProps) {
+  return (
+    <>
+      <button type={type} onClick={action}>
+        {label}
+      </button>
+    </>
+  );
 }
 
 export default ButtonDefault;

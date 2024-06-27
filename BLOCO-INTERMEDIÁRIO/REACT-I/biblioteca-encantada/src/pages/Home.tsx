@@ -13,7 +13,8 @@ function Home() {
   const [description, setDescription] = useState<string>("");
   const [books, setBooks] = useState<BooksType[]>([]);
 
-  function handleClick() {
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
     if (id && title && author && publication && date && gender && description) {
       const book: BooksType = {
         id,
@@ -26,15 +27,15 @@ function Home() {
       };
 
       const newBooks = [...books, book];
-
       setBooks(newBooks);
       localStorage.setItem("books", JSON.stringify(newBooks));
+      console.log(newBooks);
     }
   }
 
   return (
     <>
-      <form onSubmit={handleClick}>
+      <form onSubmit={handleSubmit}>
         <InputDefault action={setId} key="id" label="ID" value={id} />
         <InputDefault
           action={setTitle}
@@ -51,7 +52,7 @@ function Home() {
         <InputDefault
           action={setPublication}
           key="publication"
-          label="Ano de Publicacao"
+          label="Ano de Publicação"
           value={publication}
         />
 
@@ -65,10 +66,10 @@ function Home() {
         <InputDefault
           action={setDescription}
           key="description"
-          label="Descricao"
+          label="Descrição"
           value={description}
         />
-        <ButtonDefault label="Cadastrar" />
+        <ButtonDefault label="Cadastrar" type="submit" />
       </form>
     </>
   );
