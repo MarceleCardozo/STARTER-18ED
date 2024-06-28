@@ -2,6 +2,7 @@ import { useState } from "react";
 import InputDefault from "../components/InputDefault";
 import ButtonDefault from "../components/ButtonDefault";
 import BooksType from "../types/BooksType";
+import Modal from "../components/Modal";
 
 function Home() {
   const [id, setId] = useState<string>("");
@@ -35,42 +36,49 @@ function Home() {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
-        <InputDefault action={setId} key="id" label="ID" value={id} />
-        <InputDefault
-          action={setTitle}
-          key="title"
-          label="Titulo"
-          value={title}
-        />
-        <InputDefault
-          action={setAuthor}
-          key="author"
-          label="Autor"
-          value={author}
-        />
-        <InputDefault
-          action={setPublication}
-          key="publication"
-          label="Ano de Publicação"
-          value={publication}
-        />
+      <Modal title="Cadastrar Livros">
+        <form onSubmit={handleSubmit}>
+          <InputDefault action={setId} key="id" label="ID" value={id} />
+          <InputDefault
+            action={setTitle}
+            key="title"
+            label="Titulo"
+            value={title}
+          />
+          <InputDefault
+            action={setAuthor}
+            key="author"
+            label="Autor"
+            value={author}
+          />
+          <InputDefault
+            action={setPublication}
+            key="publication"
+            label="Ano de Publicação"
+            value={publication}
+          />
 
-        <InputDefault
-          action={setDate}
-          key="date"
-          label="Data de Cadastro"
-          value={date}
-        />
-        <InputDefault action={setGender} key="" label="Genero" value={gender} />
-        <InputDefault
-          action={setDescription}
-          key="description"
-          label="Descrição"
-          value={description}
-        />
-        <ButtonDefault label="Cadastrar" type="submit" />
-      </form>
+          <InputDefault
+            action={setDate}
+            key="date"
+            label="Data de Cadastro"
+            value={date}
+          />
+          <InputDefault
+            action={setGender}
+            key=""
+            label="Genero"
+            value={gender}
+          />
+          <InputDefault
+            action={setDescription}
+            key="description"
+            label="Descrição"
+            value={description}
+          />
+          <ButtonDefault label="Cadastrar" type="submit" />
+        </form>
+      </Modal>
     </>
   );
 }
