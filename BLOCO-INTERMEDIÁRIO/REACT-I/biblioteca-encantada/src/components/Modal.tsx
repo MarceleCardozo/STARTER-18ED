@@ -6,9 +6,10 @@ interface ModalProps {
   title: string;
   children: React.ReactNode;
   action: () => void;
+  actionConfirm: () => void;
 }
 
-function Modal({ title, children, action }: ModalProps) {
+function Modal({ title, children, action, actionConfirm }: ModalProps) {
   return (
     <ModalStyled>
       <div
@@ -30,7 +31,7 @@ function Modal({ title, children, action }: ModalProps) {
         <div>{children}</div>
         <div>
           <ButtonDefault action={action} label="Cancelar" />
-          <ButtonDefault label="Confirmar" />
+          <ButtonDefault label="Confirmar" action={actionConfirm} />
         </div>
       </div>
     </ModalStyled>

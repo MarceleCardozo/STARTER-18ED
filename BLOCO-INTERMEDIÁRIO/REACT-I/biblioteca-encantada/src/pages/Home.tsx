@@ -34,16 +34,30 @@ function Home() {
 
       const newBooks = [...books, book];
       setBooks(newBooks);
-      localStorage.setItem("books", JSON.stringify(newBooks));
-      openModal();
     }
+    setId("");
+    setTitle("");
+    setAuthor("");
+    setPublication("");
+    setDate("");
+    setGender("");
+    setDescription("");
+  }
+  function deleteBook(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const booksFilter = books.filter((book) => book.id !== id);
+    setBooks(booksFilter);
   }
 
   return (
     <>
       <ButtonDefault label="Adicionar Livro" action={openModal} />
       {open && (
-        <Modal action={openModal} title="Cadastrar Livros">
+        <Modal
+          action={openModal}
+          actionConfirm={openModal}
+          title="Cadastrar Livros"
+        >
           <form onSubmit={handleSubmit}>
             <InputDefault action={setId} key="id" label="ID" value={id} />
             <InputDefault
@@ -87,6 +101,23 @@ function Home() {
           </form>
         </Modal>
       )}
+      {books.map((item) => (
+        <div>
+          <p>Title: {item.title}</p>
+          <p>Autor: {item.author}</p>
+          <p>Ano de Publicação: {item.publication}</p>
+          <br />
+        </div>
+      ))}
+      <form onSubmit={deleteBook}>
+        <InputDefault
+          action={setId}
+          key="deleteId"
+          label="Deletar ID"
+          value={id}
+        />
+        <ButtonDefault label="Deletar Livro" type="submit" />
+      </form>
     </>
   );
 }
