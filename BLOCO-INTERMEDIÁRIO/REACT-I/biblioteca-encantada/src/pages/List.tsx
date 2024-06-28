@@ -1,4 +1,4 @@
-import { useState } from "react";
+import {useState} from "react";
 import BooksType from "../types/BooksType";
 import ButtonDefault from "../components/ButtonDefault";
 
@@ -7,6 +7,12 @@ function List() {
   function getBooks() {
     const getBook = JSON.parse(localStorage.getItem("books") || "");
     setBooks(getBook);
+  }
+
+  function deleteBook(id: string) {
+    const booksFilter = books.filter((book) => book.id !== id);
+    localStorage.removeItem("books");
+    localStorage.setItem("books", JSON.stringify(booksFilter));
   }
 
   return (
