@@ -8,6 +8,8 @@ function Count() {
 
   useEffect(() => {
     console.log("O contador mudou de valor: ", count);
+
+    localStorage.setItem("count", count.toString());
   }, [count]);
 
   return (
